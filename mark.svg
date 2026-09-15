@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Tempus">
+  <!-- The Tempus mark. Same geometry as Tempus/SunMark.swift: four rounded bars
+       crossed at 45°, which is eight arms, around a lit core. Keep the two in
+       step by eye — this is the one copy the app does not draw. -->
+  <g fill="#d4470a">
+    <rect x="43.5" y="2" width="13" height="96" rx="3" transform="rotate(0 50 50)"/>
+    <rect x="43.5" y="2" width="13" height="96" rx="3" transform="rotate(45 50 50)"/>
+    <rect x="43.5" y="2" width="13" height="96" rx="3" transform="rotate(90 50 50)"/>
+    <rect x="43.5" y="2" width="13" height="96" rx="3" transform="rotate(135 50 50)"/>
+  </g>
+  <circle cx="50" cy="50" r="11" fill="#ffc933"/>
+</svg>

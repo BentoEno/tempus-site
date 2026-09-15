@@ -22,7 +22,20 @@ header { margin-bottom: 40px; }
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 0 0 12px;
+  margin: 0 0 14px;
+  /* The mark, from the one file both pages and the favicon use. A background
+     rather than markup in each page: one definition, and nothing to forget
+     when a third page is added. */
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  flex: none;
+  background: url(mark.svg) center / contain no-repeat;
 }
 h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; font-weight: 600; }
 h2 { font-size: 1.25rem; margin: 40px 0 12px; font-weight: 600; }
