@@ -49,18 +49,19 @@ server of mine.</p>
 </div>
 
 <h2>What does leave your device</h2>
-<p>Your account, your subscription record, anonymous usage statistics, and your
-email address if you ask for updates. Never your work.</p>
+<p>Your account and subscription record if you sign in, anonymous usage
+statistics if you agree to them, and your email address if you ask for updates.
+Never your work.</p>
 
-<h3>Your account</h3>
-<p>Signing in with Apple or Google creates an account held by Supabase, which
+<h3>Your account (optional)</h3>
+<p>You can use Focus Studio without an account. If you choose to, signing in with Apple or Google creates an account held by Supabase, which
 hosts Focus Studio's server. It stores an account identifier and the email address
 your provider gives us. Sign in with Apple is asked for your email only. If you
 use Google, Google also passes your name and profile photo address, and Supabase
 keeps them on the account record; Focus Studio does not use them. If you use Sign in with Apple and choose to hide your
 address, we receive only Apple's private relay address and never your real one.</p>
 <p>The account exists so your subscription belongs to you rather than to a
-device. It holds no goals, tasks or blocks, and there is no mechanism by which
+single Apple ID. It holds no goals, tasks or blocks, and there is no mechanism by which
 it could.</p>
 
 <h3>Your subscription</h3>
@@ -68,7 +69,8 @@ it could.</p>
 or your billing address. When you subscribe, Apple gives the app a signed
 receipt, which Focus Studio sends to its own server. The server checks the signature
 with Apple and records whether your subscription is active, which product it is
-for, and when it expires, against your account.</p>
+for, and when it expires, against your account. Without an account nothing is
+sent: Apple's own receipt on your device is all Focus Studio needs.</p>
 
 <h3>The mailing list</h3>
 <p>If you fill in the optional "Occasional updates" field in Settings, that email
@@ -94,7 +96,10 @@ consent screen made that a good trade. <strong>Nothing has ever been sent to
 Google, because the app was never published in that form.</strong></p>
 </div>
 
-<h3>Anonymous usage statistics (on by default, one switch to stop it)</h3>
+<h3>Anonymous usage statistics (only if you agree)</h3>
+<p>Focus Studio asks during setup whether you want to share anonymous usage.
+Nothing is sent until you say yes, and nothing is sent if you say no or skip
+the question.</p>
 <p>Focus Studio uses PostHog to understand which screens get used and where people get
 stuck. What travels is event names, counts, and figures your device has already
 worked out for itself: your calibration score, how many blocks you finished,
@@ -108,7 +113,7 @@ the network address the data arrives from, as any server does.</p>
 project names, no goal titles, no notes, no calendar event titles. This is
 enforced by an automated test that reads the source of every tracking call and
 fails the build if one carries a title, a name or a note.</p>
-<p>Turn it off with "Share anonymous usage" in Settings. Data goes to PostHog in
+<p>Change your answer at any time with "Share anonymous usage" in Settings. Data goes to PostHog in
 the United States.</p>
 
 <h2>What Focus Studio does not do</h2>
