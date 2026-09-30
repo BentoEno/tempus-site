@@ -12,7 +12,7 @@
 <header>
   <p class="eyebrow">Focus Studio</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated 15 September 2026</p>
+  <p class="updated">Last updated 30 September 2026</p>
 </header>
 
 <p class="lede">Focus Studio keeps a detailed record of when you work and what you are
@@ -26,7 +26,8 @@ to <a href="mailto:muh.ahnafabid@gmail.com">muh.ahnafabid@gmail.com</a>.</p>
 
 <h2>Your work never reaches me</h2>
 <div class="card">
-<p>Your goals, tasks, projects, notes, estimates and every logged block are
+<p>Your goals, tasks, projects, notes, estimates, every logged block, and the
+name and photo you give your profile are
 stored on your device and synchronised through <strong>your own iCloud private
 database</strong>. That is Apple's infrastructure, tied to your Apple Account.
 I have no access to it, no copy of it, and no way to obtain one.</p>
@@ -36,10 +37,15 @@ calendar you choose. None of that passes through any server of mine.</p>
 <p>Reminders work the same way, and only if you switch them on in Settings.
 Focus Studio then reads and writes the Apple Reminders lists you pick, through
 EventKit on the device, and Apple syncs them as it always does.</p>
-<p>If you use the shield, the apps and websites you pick are represented by
-opaque tokens issued by Apple's Screen Time system. Those tokens never leave the
-device that created them, and they mean nothing anywhere else. Focus Studio is never
-told which apps you chose.</p>
+<p>If you use the shield on iPhone or iPad, the apps and websites you pick are
+represented by opaque tokens issued by Apple's Screen Time system. Those tokens
+never leave the device that created them, and they mean nothing anywhere else.
+Focus Studio is never told which apps you chose there; your other devices learn
+only how many were picked.</p>
+<p>On the Mac there is no Screen Time, so a blocklist there holds the apps and
+website addresses you add by name. Those, with your blocklists' names and
+schedules, sync through your own iCloud like the rest of your work and reach no
+server of mine.</p>
 </div>
 
 <h2>What does leave your device</h2>
@@ -49,7 +55,9 @@ email address if you ask for updates. Never your work.</p>
 <h3>Your account</h3>
 <p>Signing in with Apple or Google creates an account held by Supabase, which
 hosts Focus Studio's server. It stores an account identifier and the email address
-your provider gives us. If you use Sign in with Apple and choose to hide your
+your provider gives us. Sign in with Apple is asked for your email only. If you
+use Google, Google also passes your name and profile photo address, and Supabase
+keeps them on the account record; Focus Studio does not use them. If you use Sign in with Apple and choose to hide your
 address, we receive only Apple's private relay address and never your real one.</p>
 <p>The account exists so your subscription belongs to you rather than to a
 device. It holds no goals, tasks or blocks, and there is no mechanism by which
@@ -77,8 +85,8 @@ findings up in plain English using <strong>Apple's own on-device model</strong>.
 No key, no server, no network request. The sentences are composed on the device
 you are holding and never travel.</p>
 <p>This needs Apple Intelligence, which means an iPhone 15 Pro or newer, or a
-Mac with Apple silicon. Where it is unavailable, Focus Studio shows the same findings
-as plain statements instead and says why.</p>
+Mac with Apple silicon. Where it is unavailable, Focus Studio says so once and then
+leaves the written insights out.</p>
 <p>An earlier design sent those sentences to Google's Gemini to be reworded.
 That was removed on 15 September 2026 before Focus Studio was ever released, because
 the sentences carry the names of your goals and projects and no wording of a
@@ -90,7 +98,12 @@ Google, because the app was never published in that form.</strong></p>
 <p>Focus Studio uses PostHog to understand which screens get used and where people get
 stuck. What travels is event names, counts, and figures your device has already
 worked out for itself: your calibration score, how many blocks you finished,
-whether you hit the day's target.</p>
+whether you hit the day's target, and your answers to the fixed-choice
+questions in onboarding.</p>
+<p>With them goes what any app reports about its surroundings: a random
+identifier created on install (not your account, and never linked to it), the
+device model, the system and app versions, and the language. PostHog also sees
+the network address the data arrives from, as any server does.</p>
 <p><strong>What never travels is anything you typed:</strong> no task titles, no
 project names, no goal titles, no notes, no calendar event titles. This is
 enforced by an automated test that reads the source of every tracking call and
@@ -105,8 +118,9 @@ other companies' apps or websites, for advertising or for anything else.</li>
 <li><strong>No advertising, and no advertising identifiers.</strong></li>
 <li><strong>No data brokers.</strong> Nothing is sold, rented or shared for
 anyone else's marketing.</li>
-<li><strong>No profile building.</strong> The account is an identifier and an
-email address. That is the whole of it.</li>
+<li><strong>No profile building.</strong> The account is an identifier, an
+email address and, with Google, the name and photo address Google sends. That is
+the whole of it.</li>
 </ul>
 
 <h2>How long things are kept</h2>
@@ -135,8 +149,9 @@ and ask for deletion, or for a copy of what the account holds.</p>
 <h2>Your rights</h2>
 <p>Depending on where you live, you may have the right to see what is held about
 you, to have it corrected or deleted, to object to processing, or to receive a
-copy. Focus Studio holds almost nothing. The anonymous usage statistics are the only
-thing, and the switch in Settings stops them. Write to the address above for
+copy. Focus Studio holds almost nothing: the account and subscription record
+described above, which Delete account removes, and the anonymous usage
+statistics, which the switch in Settings stops. Write to the address above for
 anything else and you will get an answer.</p>
 
 <h2>Children</h2>
